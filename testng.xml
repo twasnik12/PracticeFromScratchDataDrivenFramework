@@ -7,7 +7,8 @@
 	<test name="ChromeTest">
 		<parameter name="browser" value="Chrome"></parameter>
 		<classes>
-			<class name="com.PS.testcases.LoginTest" />
+			<!--  class name="com.PS.testcases.LoginTest" /-->
+			<class name="com.PS.testcases.HomePageTest" />
 		</classes>
 	</test> <!-- Test -->
 

@@ -15,7 +15,7 @@ import com.PS.pageObjects.LoginPage;
 public class LoginTest extends BaseClass {
 
 	LoginPage lp;
-	HomePage homepage;
+	HomePage hp;
 
 	public LoginTest() throws IOException
 	{
@@ -29,7 +29,7 @@ public class LoginTest extends BaseClass {
 		lp = new LoginPage();
 	}	
 	@Test(priority=1)
-	public void loginPageTitleTest()
+	public void loginPageTitleTest() throws Exception
 	{
 
 		String actTitle=lp.validateLoginPageTitle();
@@ -40,18 +40,18 @@ public class LoginTest extends BaseClass {
 		System.out.println("Title of the page........ "  +title);
 	}
 	
-//	@Test(priority=2)
+	@Test(priority=2)
 	public void logoVerify()
 	{
 		boolean flag= lp.verifyLogo();
 		System.out.println("Logo is verified ........ "  +flag);
 	}
 
-//	@Test
+	@Test
 	public void logintest()
 	{
 
-		homepage=lp.logindata(prop.getProperty("username"),prop.getProperty("password"));
+		hp=lp.logindata(prop.getProperty("username"),prop.getProperty("password"));
 	}
 	
 	@AfterMethod

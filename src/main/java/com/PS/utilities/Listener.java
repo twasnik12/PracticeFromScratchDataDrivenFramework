@@ -1,17 +1,12 @@
 package com.PS.utilities;
-
-
 import java.io.File;
 import java.io.IOException;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-
-
 import com.PS.commons.BaseClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -23,14 +18,14 @@ public class Listener extends BaseClass implements ITestListener {
 
 	ThreadLocal<ExtentTest> extenttest = new ThreadLocal<ExtentTest>();
 
-	public void onTestSuccess(ITestResult result) {
-
-		ObjectRepo.test.log(Status.PASS, "TEST CASE IS PASS");
-
-		ObjectRepo.test.addScreenCaptureFromBase64String(getCapture(), "test case passed ");
-		System.out.println("********Test is succesful**********" + result.getName());
-
-	}
+//	public void onTestSuccess(ITestResult result) {
+//
+//		ObjectRepo.test.log(Status.PASS, "TEST CASE IS PASS");
+//
+//		ObjectRepo.test.addScreenCaptureFromBase64String(getCapture(), "test case passed ");
+//		System.out.println("********Test is succesful**********" + result.getName());
+//
+//	}
 
 	public void onTestStart(ITestResult result) {
 		ObjectRepo.test = extent
